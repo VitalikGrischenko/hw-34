@@ -1,3 +1,5 @@
+contactList
+
 document.addEventListener('DOMContentLoaded', function() {
     const taskList = document.getElementById('taskList');
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -40,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
   document.addEventListener('DOMContentLoaded', function() {
-    const bookmarkList = document.getElementById('bookmarkList');
+    const zakladkiList = document.getElementById('zakladkiList');
     let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
 
     function renderBookmarks() {
-      bookmarkList.innerHTML = '';
+        zakladkiList.innerHTML = '';
 
       bookmarks.forEach((bookmark, index) => {
         const listItem = document.createElement('li');
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span>${bookmark.title}</span>
           <button onclick="deleteBookmark(${index})">Delete</button>
         `;
-        bookmarkList.appendChild(listItem);
+        zakladkiList.appendChild(listItem);
       });
     }
 
@@ -69,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    const contactList = document.getElementById('contactList');
+    const xzList = document.getElementById('xzList');
     let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
 
     function renderContacts() {
-      contactList.innerHTML = '';
+        xzList.innerHTML = '';
 
       contacts.forEach((contact, index) => {
         const listItem = document.createElement('li');
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <button onclick="editContact(${index})">Edit</button>
           <button onclick="deleteContact(${index})">Delete</button>
         `;
-        contactList.appendChild(listItem);
+        xzList.appendChild(listItem);
       });
     }
 
